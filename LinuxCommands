@@ -1,0 +1,10 @@
+#TCP dump at port 6102
+sudo tcpdump -Xvv -i lo tcp port 6102
+
+# show process info for APP
+ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid' | grep APP
+
+# IPv4 tcp connection
+lsof -Pnl +M -i4
+# Tcp connection with port 8888
+lsof -Pnl -i:8888
