@@ -8,3 +8,9 @@ ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid' | grep APP
 lsof -Pnl +M -i4
 # Tcp connection with port 8888
 lsof -Pnl -i:8888
+
+#show listening port info for pid
+sudo netstat -ltpn | grep 20571
+
+#show listening port info for APP
+sudo netstat -ltpn | grep APP
