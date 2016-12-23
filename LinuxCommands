@@ -14,3 +14,6 @@ sudo netstat -ltpn | grep 20571
 
 #show listening port info for APP
 sudo netstat -ltpn | grep APP
+
+#show PID info,eg:exe cwd cmdline
+sudo ls -l /proc/PID
