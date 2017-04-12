@@ -17,3 +17,6 @@ sudo netstat -ltpn | grep APP
 
 #show PID info,eg:exe cwd cmdline
 sudo ls -l /proc/PID
+
+#show server connection status
+netstat -n | awk '/^tcp/ {++state[$NF]} END {for(key in state) print key,"\t",state[key]}'
