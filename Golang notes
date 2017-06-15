@@ -1,0 +1,2 @@
+2 Program Structure
+2.1Package-level variables are initialized before main begins.
