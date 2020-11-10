@@ -27,3 +27,8 @@ netstat -n | awk '/^tcp/ {++state[$NF]} END {for(key in state) print key,"\t",st
 #git view all changes between two version
 #
 git diff --name-status HEAD~5
+
+# view tcp available congestion control
+sysctl net.ipv4.tcp_available_congestion_control
+#view tcp congestion control
+sysctl net.ipv4.tcp_congestion_control
