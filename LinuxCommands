@@ -32,3 +32,6 @@ git diff --name-status HEAD~5
 sysctl net.ipv4.tcp_available_congestion_control
 #view tcp congestion control
 sysctl net.ipv4.tcp_congestion_control
+
+# TLB cache miss
+perf stat -e dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses -p $PID
